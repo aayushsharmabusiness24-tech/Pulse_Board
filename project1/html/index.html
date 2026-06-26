@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project_1 Using Bootstrap 5.3</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <div class="d-flex bg-secondary-subtle">
+        <nav class="navbar-nav  sidebar text-white p-3 h-100vh  text-white">
+            <div class="logo">
+                <a class="navbar-brand"> 🟢Pulse Board
+                </a>
+            </div>
+            <ul class="nav flex-column ">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">📊Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">🧩Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">🔔Alerts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">📋Logs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">⚙️Settings</a>
+                </li>
+            </ul>
+
+
+        </nav>
+        <div class="container-fluid ">
+            <div>
+                <p class="text-muted float-end ">last updated just now <br>
+                    <button class="btn btn-primary float-end  ">Refresh</button>
+                </p>
+                <h3 class="mt-3 ">Infrastructure Overview</h3>
+                <p class="text-muted">Region <b>ap-south-1 </b> . 12 hosts . auto-refresh paused</p>
+
+            </div>
+            <div class="row g-3 mt-3">
+                <div class="col-md-3 col-12 col-sm-6 col-lg-3 ">
+                    <div class="card   h-100 p-2 w-100 " id="card1">
+                        <p class="text-muted">CPU load</p>
+                        <h3> 75%</h3>
+                        <div class="progress ">
+
+                            <div class="progress-bar bg-warning " style="width: 55%;"></div>
+                        </div>
+                        <p>avg across 12 crores</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+                    <div class="card   h-100 p-2 w-100" id="card2">
+                        <p class="text-muted">Memory</p>
+                        <h3>58%</h3>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: 58%;"></div>
+                        </div>
+                        <p>38 / 64GB used</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+                    <div class="card mb-3  h-100 p-2 w-100" id="card3">
+                        <p class="text-muted">Disk I/O</p>
+                        <h3>88%</h3>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" style="width: 88%;"></div>
+                        </div>
+                        <p>nearing capacity</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+                    <div class="card  h-100   w-100 p-2" id="card4">
+                        <p class="text-muted">NETWORK</p>
+                        <h3>35%</h3>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: 35%;"> </div>
+                        </div>
+                        <p>412 Mbps inbound</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 mt-2 ">
+                <div class="col-lg-7  col-12">
+                    <div class="card p-2 h-100">
+
+                        <p><b>🧩Services</b><b class="float-end">6 monitored</b></p>
+
+                        <div>
+                            <b>api-gateway</b> web-01 <span
+                                class="float-end border rounded border-black bg-success text-white p-1"><b>Operational</b></span>
+                            <span class=" float-end"> 42ms &nbsp;</span>
+                            <hr>
+                        </div>
+                        <div>
+
+                            <b>auth-service</b> web-02 <span
+                                class="float-end border rounded border-black bg-success text-white p-1"><b>Operational</b></span>
+                            <span class=" float-end"> 61ms &nbsp;</span>
+                            <hr>
+                        </div>
+                        <div>
+
+                            <b>payments</b> pay-01 <span
+                                class="float-end border rounded border-black bg-warning text-white p-1"><b>Degraded</b></span>
+                            <span class=" float-end"> 310ms &nbsp;</span>
+                            <hr>
+                        </div>
+                        <div>
+
+                            <b>db-primary</b> db-01 <span
+                                class="float-end border rounded border-black bg-danger text-white p-1"><b>Down</b></span>
+                            <span class=" float-end">timeout &nbsp;</span>
+                            <hr>
+                        </div>
+                        <div>
+
+                            <b>search</b> srch-01 <span
+                                class="float-end border rounded border-black bg-success text-white p-1"><b>Operational</b></span>
+                            <span class=" float-end"> 88ms &nbsp;</span>
+                            <hr>
+                        </div>
+                        <div>
+
+                            <b>cdn-edge</b> edge-09 <span
+                                class="float-end border rounded border-black bg-success text-white p-1"><b>Operational</b></span>
+                            <span class=" float-end"> 19ms &nbsp;</span>
+                            <hr>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-5  col-12">
+                    <div class="card p-2 h-100 ">
+                        <p><b>Recent Alerts</b></p>
+                        <div>
+                            <span class="badge bg-danger">CRIT</span> Disk I/O above 85% on <b>db-primary</b><br>2 min
+                            ago
+                            <hr>
+                        </div>
+                        <div> <span class="badge bg-warning">WARN</span> CPU spike on <b>web-03</b><br>14 min ago
+                            <hr>
+                        </div>
+                        <div> <span class="badge bg-secondary ">INFO</span> Auto-scaling added 1 node <br>38 min ago
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-muted mt-1 mx-4">Pulse Board Demo Data Using Bootstrap 5.3</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+.navbar-nav{
+    background-color: rgb(5, 5, 62);
+    color: white;
+    
+}
+ .nav-link{
+    color: white;
+}
+.sidebar{
+    height: 105vh;
+}
+.nav {
+    margin-top: 20px;
+    font-size: larger;
+
+}
+.nav-link{
+    margin-bottom: 5vh;
+}
+.logo{
+    margin-top: 10px;
+    font-size: x-large;
+    margin-left: 5px;
+    
+}
+#card1,#card2,#card3,#card4{
+    padding: 10px;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .d-flex {
+        flex-direction:column;
+        width: 100%;
+    }
+   
+}
